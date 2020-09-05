@@ -1,0 +1,30 @@
+#title {
+    color: green;
+    font-style: Times New Roman;
+    font-size: 120px;
+    text-align: center;
+
+}
+.Heading {
+    color: black;
+    font-style: Times;
+    font-size: 80px ;
+    text-align:center;
+}
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color:green;
+    padding-top: 50px;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-bottom: 30px;
+    font-family: sans-serif;
+    color: black;
+  }
+  .content-text {
+    font-family: sans-serif;
+    font-size:40px;
+    text-align: center;
+    color: black;
+  }
