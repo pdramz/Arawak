@@ -28,3 +28,8 @@
     text-align: center;
     color: black;
   }
+  .image1 {
+    background-image: url("download-1.png");
+    height: auto;
+    width: auto;
+  }
