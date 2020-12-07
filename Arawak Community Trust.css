@@ -6,7 +6,7 @@
 
 }
 .Heading {
-    color: black;
+    color: gold;
     font-style: Times;
     font-size: 80px ;
     text-align:center;
@@ -20,11 +20,16 @@
     padding-right: 140px;
     padding-bottom: 30px;
     font-family: sans-serif;
-    color: black;
+    color: white;
   }
   .content-text {
     font-family: sans-serif;
     font-size:40px;
     text-align: center;
-    color: black;
+    color: chartreuse;
   }
+  body{
+    background: black;
+    color: chartreuse;
+
+  } 
