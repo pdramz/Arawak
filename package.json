@@ -1,0 +1,20 @@
+{
+  "name": "Arawak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "glide.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdramz/Arawak.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdramz/Arawak/issues"
+  },
+  "homepage": "https://github.com/pdramz/Arawak#readme"
+}
