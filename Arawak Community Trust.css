@@ -1,6 +1,6 @@
 .topnav{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   background-color: white;
   text-align: center;
   text-decoration-color: black;
@@ -32,7 +32,7 @@
   }
   .content-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:40px;
+    font-size:20px;
     text-align: center;
     color: black;
   }
@@ -142,4 +142,8 @@ html {
     width: 100%;
     display: block;
   }
+}
+.bullets {
+  font-size: 20px;
+  columns: #100010;
 }
