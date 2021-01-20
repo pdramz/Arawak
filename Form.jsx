@@ -101,11 +101,21 @@ renderInterest(){
     <input type="text"/></div>
   )
 }
-
+formSubmit(event){
+  event.preventDefault();
+  const data={form:"myformdata"}
+  fetch("http://127.0.0.1:3000/vendor-pg", {
+    method: "POST", 
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+}
+  })
+}
  render() {
     return (
       
-      <form>
+      <form onSubmit={this.formSubmit.bind()}>
         <h1>Hello</h1>
 
         {!this.props.hideFirstName && this.renderFirstName()}
@@ -132,7 +142,7 @@ renderInterest(){
 
         {!this.props.hideInterest && this.renderInterest()}
 
-      
+      <button type = "submit">Submit</button>
         
       </form>
     );

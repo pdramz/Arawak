@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content= "width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--Page Title Header-->
         <title>Arawak Community Trust - About Us</title>
 
@@ -13,15 +13,15 @@
     <body>
         <!-- Navigation Bar for the website -->
         <nav class="topnav">
-            <a href="/Arawak Community Trust.html">HOME</a>
-            <a href="/ACT-about-pg.html">ABOUT</a>
-            <a href="C:\Users\pdram\Desktop\Arawak\Constitution V1 2018.docx" target="_blank">CONSTITUTION</a>
-            <!--You need to add the link to the ACT Constitution-->
-            <a href="#contact">CONTACT</a>
-            <a href="https://www.arawakradio.com/"target="_blank">Arawak Radio Station</a>
-            <!--This needs the link to the website-->
-            <a href="/ACT-FamilyFunDay-pg.html">Family Fun Day</a>
-            <!--This needs the link to the website-->
+          <a href="/Arawak Community Trust.html">HOME</a>
+          <a href="ACT-about-pg.html">ABOUT</a>
+          <a href="ACT-Constitution-pg copy.html">CONSTITUTION</a>
+          <a href="ACT-News-pg.html">NEWS</a>
+          <a href="ACT-SupportAct-pg.html">SUPPORT</a>
+          <a href="volunteer-pg.html">VOLUNTEER</a>
+          <a href="vendor-pg.html">VENDOR</a>
+          <a href="ACT-FamilyFunDay-pg.html">FAMILY FUN DAY</a>
+          <a href="https://www.arawakradio.com/"target="_blank">Arawak Radio Station</a>
         </nav>
 
         <!--Page title-->
@@ -29,10 +29,15 @@
             <!--Page title-->
             <img src="Logo.jpg" alt="ACT logo" style="width:900px; height:300px;" class= "Centre">
         </header>
-        <!--2nd Webpage "ABOUT" Page 2-->
-            <!--How much about do you want to-->
-        <!--    <div class="Heading"><h2>ABOUT US</h2></div>
-            <div class="Heading"><h3>Who we are</h3></div>-->
+        
+        <!--Social Media Bar-->
+<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
             
             <div class="about-section">
                 <h1>About Us</h1>
@@ -44,10 +49,10 @@
               <div class="row">
                 <div class="column">
                   <div class="card">
-                    <img src="Mikey.jpg" alt="Mikey Lee" style="width:100%">
+                    <img src="Mikey.jpg" alt="Michael Lee" style="width:100%">
                     <div class="container">
-                      <h2>Mikey Lee</h2>
-                      <p class="title">CEO & Founder</p>
+                      <h2>Michael Lee</h2>
+                      <p class="title">Chairman</p>
                       <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                       <p>jane@example.com</p>
                       <p><button class="button">Contact</button></p>
@@ -57,10 +62,10 @@
               
                 <div class="column">
                   <div class="card">
-                    <img src="Clive.jpg" alt="Clive Tennison" style="width:100%">
+                    <img src="Clive.jpg" alt="Clive Tennant" style="width:100%">
                     <div class="container">
-                      <h2>Clive Tennison</h2>
-                      <p class="title">Art Director</p>
+                      <h2>Clive Tennant</h2>
+                      <p class="title">Vice Chair</p>
                       <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                       <p>mike@example.com</p>
                       <p><button class="button">Contact</button></p>
@@ -73,7 +78,7 @@
                     <img src="Edwin Ladd - Mr Ladd Media-1007927.jpg" alt="Sherril Donaldson" style="width:100%">
                     <div class="container">
                       <h2>Sherril Donaldson</h2>
-                      <p class="title">Designer</p>
+                      <p class="title">Secretary</p>
                       <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                       <p>john@example.com</p>
                       <p><button class="button">Contact</button></p>
@@ -119,9 +124,9 @@
                     both the Family Fun Day and the radio.
                     </p>
             </div>
-            <!--Incorporate the link to the constitution-->
-            <div class="Heading"><h2>CONSTITUTION</h2></div>
 
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=161,%20Broad%20Street,%20Coventry,%20CV6%205AX&t=k&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://embedgooglemap.net/maps/84"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://google-map-generator.com">embed google map in wordpress</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+           
             <!--The Social media link and a contact media panel required here-->
             <div class="Heading"><h2>CONTACT US</h2></div>
            <div class="content-text"> <p>
@@ -135,7 +140,7 @@
                     <form action="action_page.php">
                   
                       <label for="name">Name</label>
-                      <input type="text" id="name" name="name" placeholder="Your name..">
+                      <input type="text" id="name" required name="name" placeholder="Your name..">
                   
                       <label for="email">Email</label>
                       <input type="text" placeholder="Enter Email" name="email" id="email" required>
@@ -148,5 +153,6 @@
                     </form>
                   </div>
                   <p></p>
+                  <script src="listening.js"type="text/babel"></script>
               </body>
           </html>

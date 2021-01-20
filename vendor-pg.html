@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content= "width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <!--Page Title Header-->
-        <title>Arawak Community Trust</title>
+        <title>Arawak Community Trust - Be a Vendor</title>
 
         <!--Link to the CSS Style sheet -->
         <link rel="stylesheet" href="Arawak Community Trust.css">
@@ -14,17 +15,25 @@
     <body>
         <!-- Navigation Bar for the website -->
         <nav class="topnav">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="C:\Users\pdram\Desktop\Arawak\Constitution V1 2018.docx" target="_blank">CONSTITUTION</a>
-            <!--You need to add the link to the ACT Constitution-->
-            <a href="#contact">CONTACT</a>
-            <a href="https://www.arawakradio.com/"target="_blank">Arawak Radio Station</a>
-            <!--This needs the link to the website-->
-            <a href="#family funday">Family Fun Day</a>
-            <!--This needs the link to the website--> 
-            
+            <a href="/Arawak Community Trust.html">HOME</a>
+                <a href="ACT-about-pg.html">ABOUT</a>
+                <a href="ACT-Constitution-pg copy.html">CONSTITUTION</a>
+                <a href="ACT-News-pg.html">NEWS</a>
+                <a href="ACT-SupportAct-pg.html">SUPPORT</a>
+                <a href="volunteer-pg.html">VOLUNTEER</a>
+                <a href="vendor-pg.html">VENDOR</a>
+                <a href="ACT-FamilyFunDay-pg.html">FAMILY FUN DAY</a>
+                <a href="https://www.arawakradio.com/"target="_blank">Arawak Radio Station</a>
         </nav>
+
+<!--Social Media Bar-->
+<div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+    <a href="#" class="google"><i class="fa fa-google"></i></a> 
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+  </div>
 
         <header>
             <!--Page title-->
@@ -41,7 +50,33 @@
             <p>If you are interested in being a Vendor at our events please 
                 fill the form below.</p>
           </div>
-          
+    
+          <div class ="terms">
+            <span>Terms & Conditions</span>
+            <div class="terms-content">
+              <p>Terms and Conditions:
+                Please read the terms and conditions below, by completing the form below you confirm your acceptance.
+                <ol>
+                    <li>Payment  for the stalls must be paid PRIOR to the events
+                       <p> •	Direct money transfer - Bank details will be provided with invoice</p>
+                       <p> •	Cheques should be made payable to “A C T”</p>
+                       <p> •	Cash will be accepted PRIOR to the event by the organisers</p></li>
+                    <li>Refunds will ONLY be made should the organiser have to cancel any dates.  
+                        (Cancellations may be due to bad weather)</li>
+                    <li>Stallholders/activities must have personal/independent insurance cover 
+                        as the organisers cannot be held responsible for any theft, damage to exhibitors/participants’ equipment.</li>
+                    <li>The event runs from 2.00pm to 8.00pm.  Stallholders will be allowed access to the grounds from 12.00 noon.</li>
+                    <li>The organisers will provide a table and 2 chairs.  However, if possible, you are encouraged to 
+                        provide your own ‘stall furniture’ as cannot guarantee the quality of the tables and chairs provided.</li>
+                    <li>The organisers have the right to remove any stall holders if their behaviour is considered inappropriate</li>
+                    <li>Exhibitors must ONLY provide/sell the activities/products declared on this booking form</li>
+                    <li>For Health and Safety reasons, Exhibitors with vehicles MUST remain on the grounds from 1.30pm to 8.00pm.  
+                        ENTRANCE AND EXIT WITHIN THOSE HOURS WILL NOT BE PERMITTED</li>
+                </ol>
+                </div></p>
+            </div>
+          </div>
+    
           <h2 style="text-align:center">Vendor Form</h2>
         
         <div id="vendorForm"></div>
@@ -53,7 +88,11 @@
 <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="Form.jsx" type="text/babel"></script>
   <script src="vendorForm.jsx"type="text/babel"></script> </script>
+  <script src="listening.js"type="text/babel"></script>
 </body>
+</html>
+
 
 

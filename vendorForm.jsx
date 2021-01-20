@@ -1,55 +1,24 @@
-class MyForm extends React.Component {
-  render() {
-    return (
-      <form>
-        <h1>Hello</h1>
-        <p>First Name:</p>
-        <input
-          type="text"
-        />
-          <p>Surname:</p>
-        <input
-          type="text"
-        />
-          <p>Name of Business:</p>
-        <input
-          type="number"
-        />
-          <p>Stall Type:</p>
-        <input
-          type="text"
-        />
-        <p>Stall Details:</p>
-        <input
-          type="text"
-        />
-        <p>Stall Size:</p>
-        <input
-          type="text"
-        />
-        <p>Car or Van Onsite:</p>
-        <input
-          type="text"
-        />
-          <p>Contact Number:</p>
-        <input
-          type="text"
-        />
-          <p>Email Address:</p>
-        <input
-          type="text"
-        />
-          <p>Are you only interested in being a Vendor for the Family Funday Only?:</p>
-        <input
-          type="text"
-        />
-        <p></p>
-      </form>
-    );
-    
-  }
-}
-ReactDOM.render(<MyForm />, document.getElementById('root'));
+ReactDOM.render(
+
+<div>
+  <Form 
+  hideSurname={false} 
+  hideFirstName={false}
+  hideAge={false}
+  hideAreaofInterest={true}
+  hideNameofBusiness={false}
+  hideStallType={false}
+  hideStallDetails={false}
+  hideStallSize={false}
+  hideCarorVan={false}
+  hideContactNumber={false}
+  hideEmailAddress={false}
+  hideInterest={false}
+ //False in this instance means no, so to you want to hide the surname? 
+  //No = false Yes = true
+
+
+/></div>, document.getElementById('root'));
 
 
 const e = React.createElement;
@@ -58,7 +27,7 @@ function VendorForm(params) {
 return e(
     'button',
     {  },
-    'Like'
+    'Terms and Conditons'
   );   
 }
 
