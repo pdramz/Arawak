@@ -11,6 +11,7 @@ ReactDOM.render(<Form
   hideContactNumber={false}
   hideEmailAddress={false}
   hideInterest={false}
+  type="Volunteer"
   //False in this instance means no, so to you want to hide the surname? 
   //No = false Yes = true
 
