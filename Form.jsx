@@ -10,7 +10,8 @@ class Form extends React.Component {
    carorvan:"",
    contactnumber:"",
    emailaddress:"",
-   Interest:"",
+   Interestyes: true,
+   Interestno: false,
 
     }
 
@@ -19,6 +20,7 @@ class Form extends React.Component {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
+    console.log("handle?", name,value)
 
     this.setState({
       [name]: value
@@ -178,8 +180,8 @@ renderInterest(){
   return(
     <div><p>Are you interested in attending the Family Funday Only?</p>
     <div className= "bullets">
-     <p><label>Yes <input name="interestyes" checked={this.state.interestyes} type= "checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
-     <p><label>No <input name="interestno" checked={this.state.interestno} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
+     <p><label>Yes <input name="Interestyes" checked={this.state.Interestyes} type= "checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
+     <p><label>No <input name="Interestno" checked={this.state.Interestno} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
     </div>
     </div>
   )
@@ -197,6 +199,7 @@ formSubmit(event){
   const stallsize = this.state.StallSize1 || this.state.StallSize2 || this.state.StallSize3;
   const carorvan = this.state.Car || this.state.Van;
   const interest = this.state.interestyes || this.state.interestno
+  console.log(this.state)
 
   if (this.state.name === ""){
     alert("Please complete name")}
@@ -228,12 +231,13 @@ formSubmit(event){
   else if (this.state.emailaddress === ""){
     alert("Please give us an email address ")
   }
-
-  else if(this.state.Interest && !(this.props.hideInterest)){
+  else if (!(this.state.Interestyes && this.state.Interestno) && !(this.props.hideInterest)){
     alert("Please let us know which events you would like to ")
   }
 
   else{
+    console.log("Interest",this.state.Interest)
+    console.log("hideInterest",this.props.hideInterest)
     fetch(url, {
       method: "POST", 
       body: JSON.stringify(this.state),
