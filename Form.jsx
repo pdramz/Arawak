@@ -2,11 +2,11 @@ class Form extends React.Component {
   state={name: "",
    surname:"",
    age: "",
-   areaofinterest:"", 
+   areaofinterest:"",
    nameofbusiness:"",
-   stalltype:"", 
+   stalltype:"",
    stalldetails:"",
-   stallsize:"", 
+   stallsize:"",
    carorvan:"",
    contactnumber:"",
    emailaddress:"",
@@ -25,7 +25,7 @@ class Form extends React.Component {
     this.setState({
       [name]: value
        //[]= hack to ensure that the outcome of the state is used rather than just the key of the state is used
-    //event what has just happen (name change). the element event happened on. value of current element 
+    //event what has just happen (name change). the element event happened on. value of current element
     });
   }
 
@@ -41,7 +41,7 @@ class Form extends React.Component {
               /></div>
     )
   }
-//event what has just happen (name change). the element event happened on. value of current element 
+//event what has just happen (name change). the element event happened on. value of current element
     renderFirstName() {
       return (
           <div><p>First Name:</p>
@@ -59,7 +59,7 @@ class Form extends React.Component {
     return (
       <div><p>Age</p>
       <input
-      name="age" 
+      name="age"
       type="number"
       value={this.state.age}
       onChange={this.handleInputChange.bind(this)}
@@ -68,7 +68,7 @@ class Form extends React.Component {
       </div>
     )
   }
-   
+
 renderAreaofInterest(){
   return (
     <div><p>Area of Interest</p>
@@ -117,7 +117,7 @@ renderStallType(){
 renderStallDetails(){
   return (
     <div><p>Stall Details:</p>
-    <input 
+    <input
     name="stalldetails"
     type="text"
     value={this.state.stalldetails}
@@ -131,7 +131,7 @@ renderStallSize(){
   return (
     <div><p>Stall Size:</p>
     <div className = "bullets">
-    <p><label>1 Table<input name="StallSize1" checked={this.state.StallSize1} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p> 
+    <p><label>1 Table<input name="StallSize1" checked={this.state.StallSize1} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
     <p><label>2 Table<input name="StallSize2" checked={this.state.StallSize2} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
     <p><label>3 Table<input name="StallSize3" checked={this.state.StallSize3} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
     </div>
@@ -153,10 +153,10 @@ renderCarorVan(){
 renderContactNumber(){
 return(
   <div><p>Contact Number</p>
-  <input 
+  <input
   name="contactnumber"
-  type="text" 
-  value={this.state.contactnumber} 
+  type="text"
+  value={this.state.contactnumber}
   onChange={this.handleInputChange.bind(this)}
   placeholder="07XXX XXX XXX"
   /></div>
@@ -166,10 +166,10 @@ return(
 renderEmailAddress(){
   return(
     <div><p>Email Address:</p>
-    <input 
+    <input
     name="emailaddress"
-    type="text" 
-    value={this.state.emailaddress} 
+    type="text"
+    value={this.state.emailaddress}
     onChange={this.handleInputChange.bind(this)}
     placeholder="example@myemail.com"
     /></div>
@@ -188,12 +188,12 @@ renderInterest(){
 }
 formSubmit(event){
   event.preventDefault();
-  let url; 
+  let url;
   if(this.props.type=="vendor"){
     url="http://127.0.0.1:3000/vendor-pg"
   }else{
     url="http://127.0.0.1:3000/volunteer-pg";
-  
+
   }
   const anyareaofinterest = this.state.aioSecurity || this.state.aioGames || this.state.aioSupport || this.state.aioInformation ||this.state.aioSetup ||this.state.aioPost;
   const stallsize = this.state.StallSize1 || this.state.StallSize2 || this.state.StallSize3;
@@ -208,8 +208,8 @@ formSubmit(event){
   alert("Please complete surname")}
 
   else if(!this.props.hideAge && (!Number(this.state.age))) {
-    alert("Your age must be a number")} 
-  
+    alert("Your age must be a number")}
+
   else if (!this.props.hideAreaofInterest && !(anyareaofinterest)) {
       alert("Please select at least one area of interest.")}
 
@@ -224,14 +224,14 @@ formSubmit(event){
 
   else if (!this.props.hideCarorVan && !(carorvan)){
     alert("Please select a vehicle.")}
-  
+
   else if (this.state.contactnumber === ""){
       alert("Please give a contact number")}
 
   else if (this.state.emailaddress === ""){
     alert("Please give us an email address ")
   }
-  else if (!(this.state.Interestyes && this.state.Interestno) && !(this.props.hideInterest)){
+  else if (!(this.state.Interestyes || this.state.Interestno) && !(this.props.hideInterest)){
     alert("Please let us know which events you would like to ")
   }
 
@@ -239,7 +239,7 @@ formSubmit(event){
     console.log("Interest",this.state.Interest)
     console.log("hideInterest",this.props.hideInterest)
     fetch(url, {
-      method: "POST", 
+      method: "POST",
       body: JSON.stringify(this.state),
       headers: {
         'Content-Type': 'application/json'
@@ -257,23 +257,23 @@ window.location = "/Arawak Community Trust.html"}
 
 // condition of showing the value
     )}
-  
- 
+
+
   }
  render() {
     return (
-      
+
       <form onSubmit={this.formSubmit.bind(this)}>
         <h1>Hello and thank you for your submission in advance.</h1>
 
         {!this.props.hideFirstName && this.renderFirstName()}
-        
+
         {!this.props.hideSurname && this.renderSurname()}
 
         {!this.props.hideAge && this.renderAge()}
-        
+
         {!this.props.hideAreaofInterest && this.renderAreaofInterest()}
-           
+
         {!this.props.hideNameofBusiness && this.renderNameofBusiness()}
 
         {!this.props.hideStallType && this.renderStallType()}
@@ -291,9 +291,9 @@ window.location = "/Arawak Community Trust.html"}
         {!this.props.hideInterest && this.renderInterest()}
 
       <button type = "submit">Submit Form</button>
-        
+
       </form>
     );
-    
+
   }
 }
