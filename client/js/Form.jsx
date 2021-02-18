@@ -1,19 +1,19 @@
 class Form extends React.Component {
-  state={name: "",
-   surname:"",
-   age: "",
-   areaofinterest:"",
-   nameofbusiness:"",
-   stalltype:"",
-   stalldetails:"",
-   stallsize:"",
-   carorvan:"",
-   contactnumber:"",
-   emailaddress:"",
-   Interestyes: true,
-   Interestno: false,
-
-    }
+  state = {
+    name: "",
+    surname:"",
+    age: "",
+    areaofinterest:"",
+    nameofbusiness:"",
+    stalltype:"",
+    stalldetails:"",
+    stallsize:"",
+    carorvan:"",
+    contactnumber:"",
+    emailaddress:"",
+    interestYes: true,
+    interestNo: false,
+  }
 
   //object literal = {} key:value pairs
   handleInputChange(event) {
@@ -180,13 +180,13 @@ renderInterest(){
   return(
     <div><p>Are you interested in attending the Family Funday Only?</p>
     <div className= "bullets">
-     <p><label>Yes <input name="Interestyes" checked={this.state.Interestyes} type= "checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
-     <p><label>No <input name="Interestno" checked={this.state.Interestno} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
+     <p><label>Yes <input name="interestYes" checked={this.state.interestYes} type= "checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
+     <p><label>No <input name="interestNo" checked={this.state.interestNo} type="checkbox" onChange={this.handleInputChange.bind(this)}/></label></p>
     </div>
     </div>
   )
 }
-formSubmit(event){
+formSubmit(event) {
   event.preventDefault();
   let url;
   if(this.props.type=="vendor"){
@@ -198,7 +198,7 @@ formSubmit(event){
   const anyareaofinterest = this.state.aioSecurity || this.state.aioGames || this.state.aioSupport || this.state.aioInformation ||this.state.aioSetup ||this.state.aioPost;
   const stallsize = this.state.StallSize1 || this.state.StallSize2 || this.state.StallSize3;
   const carorvan = this.state.Car || this.state.Van;
-  const interest = this.state.interestyes || this.state.interestno
+  const interest = this.state.interestYes || this.state.interestNo
   console.log(this.state)
 
   if (this.state.name === ""){
@@ -231,23 +231,21 @@ formSubmit(event){
   else if (this.state.emailaddress === ""){
     alert("Please give us an email address ")
   }
-  else if (!(this.state.Interestyes || this.state.Interestno) && !(this.props.hideInterest)){
+  else if (!interest && !(this.props.hideInterest)) {
     alert("Please let us know which events you would like to ")
   }
+  else {
 
-  else{
-    console.log("Interest",this.state.Interest)
-    console.log("hideInterest",this.props.hideInterest)
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify(this.state),
-      headers: {
-        'Content-Type': 'application/json'
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(this.state),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(data =>{
+    alert("Thank you for submitting your form. We will be in touch with you shortly.")
+    window.location = "arawak-community-trust.html"
   }
-    }).then(data =>{
-alert("Thank you for submitting your form. We will be in touch with you shortly.")
-
-window.location = "/Arawak Community Trust.html"}
 
 //this.state.submited = true
 
@@ -260,7 +258,7 @@ window.location = "/Arawak Community Trust.html"}
 
 
   }
- render() {
+  render() {
     return (
 
       <form onSubmit={this.formSubmit.bind(this)}>
